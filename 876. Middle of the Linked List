@@ -25,6 +25,21 @@ Constraints:
 The number of nodes in the list is in the range [1, 100].
 1 <= Node.val <= 100
 
+APPROACH - floyd's cycle detection algorithm
+
+While traversing the linked list one of these things will occur-
+
+The Fast pointer may reach the end (NULL) this shows that there is no loop n the linked list.
+The Fast pointer again catches the slow pointer at some time therefore a loop exists in the linked list.
+
+Pseudocode:
+
+Initialize two-pointers and start traversing the linked list.
+Move the slow pointer by one position.
+Move the fast pointer by two positions.
+If both pointers meet at some point then a loop exists and if the fast pointer meets the end position then no loop exists.
+
+
 CODE:
 # Definition for singly-linked list.
 # class ListNode:
